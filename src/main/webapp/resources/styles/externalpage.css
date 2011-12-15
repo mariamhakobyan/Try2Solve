@@ -1,0 +1,160 @@
+/**********************************************************
+ *
+ * Copyright by Try2Solve.it
+ *
+ *********************************************************/
+
+/* ClearFix Class */
+.cf:before,.cf:after {
+	content: "";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	zoom: 1;
+}
+.hidden {
+	display: none !important;
+}
+
+/*--- LAYOUT ---*/
+html, body {
+	background: #EEEFF1;
+	color: #666;
+	display:block;
+	font-family: "helvetica neue", arial, helvetica, freesans, "liberation sans", "numbus sans l", sans-serif;
+	font-size: 13px;
+	height: 100%;
+	line-height: 1.5;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	text-decoration: italic;
+}
+
+a {
+	color: #3078CA;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* TOOLBOX */
+#toolbox {
+	background: #F7F9FA;
+	border-bottom: 1px solid #CCC;
+	height: 40px;
+	left: 0;
+	overflow: hidden;
+	position:absolute;
+	top: 0;
+	width: 100%;
+}
+#toolbox ul {
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+#toolbox ul li {
+	float: left;
+	height: 20px;
+	margin-right: 5px;
+	width: 70px;
+}
+
+#toolbox ul li a {
+	background: url("../images/sprite_icons.png") no-repeat;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding-left: 25px;
+	text-align: center;
+	text-decoration: none;
+	width: 45px;
+}
+
+#toolbox ul li a.logo {
+	background: url("../images/JavaToday-small.png") no-repeat left top
+		!important;
+	text-indent: -9999px;
+}
+
+#toolbox ul li a.bt-tertiary {
+	border: 1px solid #CCC;
+	border-radius: 2px;
+	color: #444;
+	font-size: 11px;
+}
+
+#toolbox ul li a.bt-tertiary:hover {
+	background-color: #0068B7;
+	border-color: #0068B7;
+	color: #FFFFFF;
+}
+
+#toolbox ul li a.fb-share {
+	background-position: 0 -20px;
+}
+
+#toolbox ul li a.twitter-this {
+	background-position: 0 -60px;
+}
+
+#toolbox ul li a.send-email {
+	background-position: 0 -100px;
+}
+
+#toolbox ul li a.vote-up {
+	background-position: 0 -440px;
+}
+
+#toolbox ul li a.vote-down {
+	background-position: 0 -460px;
+}
+#toolbox ul li.read-latter, #toolbox ul li.clean-read {
+	width: 85px;
+}
+#toolbox ul li.read-latter a {
+	background-position: 0 -480px;
+	width: 60px;
+}
+#toolbox ul li.clean-read a {
+	background-position: 0 -500px;
+	width: 60px;
+}
+#toolbox ul li.bt-close {
+	float: right !important;
+	margin-right: 0 !important;
+}
+
+#toolbox ul li.bt-close a {
+	color: #999;
+	background-position: 45px -400px;
+	padding-left: 0 !important;
+	padding-right: 25px;
+}
+#article-iframe {
+	display:block;
+	height: 100%;
+	margin: 41px 0 0 0;
+	padding: 0;
+	width: 100%;
+}

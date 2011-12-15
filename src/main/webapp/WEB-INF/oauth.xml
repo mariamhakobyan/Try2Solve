@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- oauth -->
+	<bean id="linkedInServiceConfig" class="it.try2solve.oauth.OAuthServiceConfig">
+		<constructor-arg value="${app.config.oauth.linkedin.apikey}" />
+		<constructor-arg value="${app.config.oauth.linkedin.apisecret}"/>
+		<constructor-arg value="${app.config.oauth.linkedin.callback}"/>
+		<constructor-arg value="org.scribe.builder.api.LinkedInApi"/>
+	</bean>
+	
+	<bean id="linkedInServiceProvider" class="it.try2solve.oauth.OAuthServiceProvider">
+		<constructor-arg name="config" ref="linkedInServiceConfig" />
+	</bean>
+	
+	<bean id="facebookServiceConfig" class="it.try2solve.oauth.OAuthServiceConfig">
+		<constructor-arg value="${app.config.oauth.facebook.apikey}" />
+		<constructor-arg value="${app.config.oauth.facebook.apisecret}"/>
+		<constructor-arg value="${app.config.oauth.facebook.callback}"/>
+		<constructor-arg value="org.scribe.builder.api.FacebookApi"/>
+	</bean>
+	
+	<bean id="facebookServiceProvider" class="it.try2solve.oauth.OAuthServiceProvider">
+		<constructor-arg name="config" ref="facebookServiceConfig" />
+	</bean>
+	
+	<bean id="twitterServiceConfig" class="it.try2solve.oauth.OAuthServiceConfig">
+		<constructor-arg value="${app.config.oauth.twitter.apikey}" />
+		<constructor-arg value="${app.config.oauth.twitter.apisecret}"/>
+		<constructor-arg value="${app.config.oauth.twitter.callback}"/>
+		<constructor-arg value="org.scribe.builder.api.TwitterApi"/>
+	</bean>
+	
+	<bean id="twitterServiceProvider" class="it.try2solve.oauth.OAuthServiceProvider">
+		<constructor-arg name="config" ref="twitterServiceConfig" />
+	</bean>
+	
+	<!-- end of oauth -->
+
+</beans>

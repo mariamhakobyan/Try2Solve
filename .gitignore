@@ -1,0 +1,8 @@
+/target
+
+# Eclipse specific settings
+
+.classpath
+.project
+.settings
+.git

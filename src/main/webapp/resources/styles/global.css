@@ -1,0 +1,481 @@
+/**********************************************************
+ *
+ * Copyright by JavaToday.com
+ *
+ *********************************************************/
+
+/* ClearFix Class */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+.cf {
+    zoom:1;
+}
+
+/*--- LAYOUT ---*/
+body {
+  background:#EEEFF1;
+  color:#666; 
+  font-family: "helvetica neue", arial, helvetica, freesans, "liberation sans", "numbus sans l", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}
+strong {font-weight: bold;}
+em {text-decoration: italic;}
+
+a {
+  color: #3078CA; 
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+    outline: none;
+}
+
+#container {
+	width:960px; 
+	margin:0 auto; 
+	overflow:hidden;
+}
+/* HEADER */
+header {
+  padding-top: 10px;
+}
+header .logo, header .logo a {
+  display: block;
+  height: 69px;
+  text-indent:-9999px;
+  width: 200px;
+}
+header .logo {
+	background: url(../images/JavaToday.png) no-repeat left top;
+	float:left;
+	margin: 0;
+}
+
+/* MAIN-MENU */
+#container header nav {
+  float: left;
+  text-align: right;
+  width: 760px;
+}
+#main-menu {
+	margin: 0;
+}
+
+#main-menu li {
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  height: 19px;
+  margin: 0;
+  padding: 35px 8px 25px 8px;
+}
+#main-menu li a {
+	display: block;
+}
+#main-menu li.login {
+	float: right;
+}
+#main-menu li.login a {
+	font-size: 13px;
+	font-weight: normal;
+}
+#main-menu li.on, #main-menu li:hover {
+	background: url(../images/notch_home_18x9.gif) no-repeat 50% bottom;
+}
+#main-menu li.bull:hover , #main-menu li.logged:hover {
+	background: none;
+}
+#main-menu li.on a {
+	color: #000;
+}
+#main-menu li.bull {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+#main-menu li.logged {
+	height: 29px;
+	margin-left: 70px;
+	padding: 30px 8px 20px 8px;
+	position: relative;
+}
+#main-menu li.logged a {
+	border: 1px solid #BBB;
+	height: 24px;
+	line-height: 24px;
+	padding: 3px 2px 2px 3px;
+}
+#main-menu li.logged a img {
+	display: block;
+	float: left;
+	margin-right: 5px;
+}
+#main-menu li.logged a span {
+	display: block;
+	float: left;
+}
+#main-menu li.logged a, #main-menu li.logged a:hover {
+	color: #000;
+	text-decoration: none;
+}
+#main-menu li.logged a span.icon {
+	background: url("../images/arrow_down.png") no-repeat 50% 50%;
+	display: block;
+	float: left;
+	margin: 0 5px;
+	width: 10px;
+}
+#user-dropdown {
+	left: 8px;
+	padding: 0;
+	position: absolute;
+	top: 62px;
+	z-index: 999;
+}
+#user-dropdown li {
+	display: block;
+	height: auto;
+	float: none;
+	margin-bottom: 1px;
+	padding: 0;
+}
+#user-dropdown li a {
+	background: #D8D8D8;
+	color: #444;
+	display: block;
+	text-align: left;
+	text-indent: 5px;
+}
+#user-dropdown li a:hover {
+	color: #FFF !important;
+    background: #444;
+}
+.selected {
+	background: #D8D8D8 !important;
+}
+
+/* CONTENT */
+#content {
+	background: #FFF;
+    border-bottom: 1px solid #DDDDDD;
+    border-radius: 6px;
+	position: relative;
+}
+h2.head {
+	border-bottom: 1px solid #F2F3F4;
+	color: #666;
+	font-weight: bold;
+    margin-top: 10px;
+    overflow: hidden;
+    padding: 7px 30px;
+}
+
+/* TABS */
+#tabs {
+	border-bottom: 1px solid #F2F3F4;
+    margin-top: 10px;
+	padding: 0 30px;
+}
+#tabs li {
+	background: #FFF;
+	border-bottom: 1px solid #F2F3F4;
+	top:1px;
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 10px;
+	position: relative;
+}
+#tabs li.on {
+	border: 1px solid #F2F3F4;
+	border-bottom: 1px solid #FFF;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#tabs li a {
+	display: inline-block;
+	font-size: 12px;
+	line-height: 32px;
+}
+#tabs li.on a {
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+}
+#tabs li.on a:hover {
+	cursor: default;
+	text-decoration: none;
+}
+#tabs li select {
+	border: 1px solid #F2F3F4;
+	border-radius: 6px;
+	display: none;
+	font-size: 13px;
+	font-weight: normal;
+	padding: 3px 5px;
+	width: 100px;
+}
+#tabs li.on select {
+	display: inline-block !important;
+	margin-left: 10px;
+}
+
+#content section {
+  	background: url(../images/bg.png) no-repeat right bottom;
+}
+/* ARTICLES */
+#articles article {
+	margin-top: 10px;
+	overflow: hidden;
+	padding: 7px 30px;
+}
+#articles article div.left {
+	border: 1px solid #F2F3F4;
+	border-radius: 6px;
+	display: inline-block;
+	float: left;
+	height: 40px;
+	margin-right: 10px;
+	padding: 5px;
+	padding-bottom: 0;
+	width: 50px;
+}
+#articles article div.left div.arrow{
+	float: left;
+	width: 20px;
+}
+#articles article div.left div.count {
+	float: right;
+	width: 30px;
+}
+#articles article div.left a {
+	display: block;
+	height: 15px;
+	margin-left: 3px;
+	margin-bottom: 5px;
+	width: 17px;
+}
+#articles article div.left span {
+	color: #369;
+	display: block;
+	font-weight: bold;
+	height: 15px;
+	margin-bottom: 3px;
+	text-align: center;
+	width: 30px;
+}
+#articles article div.left div.arrow a.up {
+	background: url("../images/vote-buttons.gif") no-repeat left top;
+	text-indent: -9999px;
+}
+#articles article div.left div.arrow a.up:hover {
+	background: url("../images/vote-buttons.gif") no-repeat left -30px;
+}
+#articles article div.left div.arrow a.down {
+	background: url("../images/vote-buttons.gif") no-repeat right top;
+	text-indent: -9999px;
+}
+#articles article div.left div.arrow a.down:hover {
+	background: url("../images/vote-buttons.gif") no-repeat right -30px;
+}
+#articles article div.right {
+	display: inline-block;
+	width: 820px;
+}
+#articles article div.right div.name a {
+	font-weight: bold;
+}
+#articles article div.right div.tags, #articles article div.right div.actions {
+	display: inline-block;
+	width: 49%;
+}
+#articles article div.right div.actions {
+	text-align: right;
+}
+#articles article div.right div.tags a, #articles article div.right div.actions a {
+	color: #AAA;
+	font-size: 11px;
+}
+
+/* LOGIN */
+#login {
+	padding: 30px;
+}
+#login nav ul{
+	text-align: center;
+}
+#login nav ul li {
+	display: inline-block;
+	overflow: hidden;
+}
+#login nav ul li a {
+	background: #D8D8D8 url("../images/sprite-providers.png") no-repeat 10px 0;
+    border: 1px solid #BBB;
+    border-radius: 2px;
+    color: #444;
+	display: block;
+    font-weight: bold;
+	padding: 10px 10px 10px 50px;
+    text-align: left;
+    text-decoration: none;
+	width: 150px;
+}
+#login nav ul li a:hover {
+	text-decoration: none;
+}
+#login nav ul li a.twitter {
+    background-position: 10px -90px;
+}
+#login nav ul li a.facebook {
+    background-position: 10px -45px;
+}
+#login nav ul li a.linkedin {
+    background-position: 10px 5px;
+}
+/* CONTACT */
+#contact {
+	margin: 30px;
+}
+#contact form {
+	float: left;
+	width: 450px;
+}
+#contact aside {
+	border: 1px solid #F2F3F4;
+	border-radius: 6px;
+	float: right;
+	padding: 5px;
+	width: 300px;
+}
+#map {
+	height: 300px;
+	width: 300px;
+}
+#contact input[type=text], #contact textarea {
+	border: 1px solid #F2F3F4;
+	border-radius: 6px;
+	font-size: 11px;
+	margin-bottom: 20px;
+	padding: 5px;
+	width: 295px;
+}
+#contact input[type=submit] {
+	background: #5494CF;
+    border: 1px solid #20619B;
+	border-radius: 6px;
+    color: #FFF;
+	margin-left: 100px;
+	padding: 5px 30px;
+}
+#contact div.form-row label {
+	float: left;
+	height: 26px;
+	margin: 10px 0;
+	line-height: 26px;
+	width: 100px;
+}
+#contact div.form-row label sup {
+	color: red;
+}
+#contact div.form-row input[type=text] {
+	height: 20px;
+}
+#contact div.form-row textarea {
+	resize: none;
+}
+
+
+/* PAGINATION */
+.pagination {
+	border-top: 1px solid #F2F3F4;
+    margin-top: 10px;
+	padding: 7px 30px;
+	text-align: right;
+}
+.pagination li {
+	background: #D8D8D8;
+	border: 1px solid #BBB;
+    border-radius: 2px;
+	display: inline-block;
+	font-weight: normal;
+	overflow: hidden;
+}
+.pagination li a {
+    color: #444;
+	display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.pagination li a:hover, .pagination li a.active {
+	color: #FFF;
+    background: #444;
+}
+.pagination li a.active {
+	cursor: default;
+}
+.pagination li.disabled a, .pagination li.disabled a:hover {
+	background: #D8D8D8;
+	cursor: default;
+	color: #BBB;
+}
+
+/* SUB-MENU */
+#sub-menu {
+	border-top: 1px solid #F2F3F4;
+    margin-top: 10px;
+	padding: 7px 30px;
+	text-align: right;
+}
+#sub-menu li {
+	display: inline-block;
+	margin-left: 10px;
+}
+#sub-menu li a {
+	color: #AAA;
+}
+
+#loader {
+	background: #FFF url("../images/transparent-ajax-loader.gif") no-repeat 50% 50%;
+    border-radius: 6px 6px 6px 6px;
+	display: none;
+	left: 0;
+    padding: 10px 30px;
+	position: absolute;
+	top: 0;
+	width:900px;
+	z-index:999;
+}
+.button {
+	background: #D8D8D8;
+	border: 1px solid #BBB;
+    border-radius: 2px;
+	color: #444;
+	display: inline-block;
+    font-weight: bold;
+	padding: 5px 10px;
+	overflow: hidden;
+}
+.button-blue {
+    border: 1px solid #20619B;
+    border-radius: 3px;
+    color: #FFF;
+	display: inline-block;
+	padding: 8px 100px;
+	background: #5494CF;
+    white-space: nowrap;
+}
+.hidden {
+	display: none !important;
+}
