@@ -6,20 +6,6 @@
 	</h1>
 	<nav>
 		<ul id="main-menu">
-			<li class="on"><a href="<c:url value="/" />"><spring:message code="menu.home"/></a></li>
-			<li class="bull">&bull;</li>
-
-			<li><a href="" title="articles"><spring:message code="menu.articles"/></a></li>
-			<li class="bull">&bull;</li>
-			
-			<li><a href="" title="videos"><spring:message code="menu.videos"/></a></li>
-			<li class="bull">&bull;</li>
-			
-			<li><a href="" title="questions"><spring:message code="menu.questions"/></a></li>
-			<li class="bull">&bull;</li>
-
-			<li><a href="" title="challenges"><spring:message code="menu.challenges"/></a></li>
-			<li class="bull">&nbsp;</li>
 			
 			<c:choose>
 				<c:when test="${not empty loggedInUser}">

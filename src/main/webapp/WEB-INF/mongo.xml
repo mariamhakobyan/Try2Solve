@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 
 <!-- MongoDB -->
-<!-- 
+
 	<mongo:mongo host="${app.config.mongo.host}" port="29117" />
 	<mongo:repositories base-package="it.try2solve.data.repository" mongo-template-ref="mongoTemplate"/>
 	
@@ -18,7 +18,7 @@
 		<property name="username" value="${app.config.mongo.user}" />
     <property name="password" value="${app.config.mongo.password}" />
 	</bean>
--->
+
 <!-- end of MongoDB -->
 
 </beans>

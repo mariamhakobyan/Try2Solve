@@ -16,7 +16,7 @@ import com.mysema.query.types.Predicate;
 @Service("userService")
 public class UserService implements it.try2solve.service.Service {
 
-	//@Autowired
+	@Autowired
 	UserRepository userRepository;
 
 	@Override
