@@ -16,16 +16,13 @@ public class ControllerMethodResolver {
 	@Autowired
 	private AnnotationMethodHandlerAdapter handlerAdapter;
 
-	private static final String methodResolverMethodName = "getMethodResolver";
-
 	public Method getControllerMethod(Object handler, HttpServletRequest request) {
 		Map methodResolverCache = getMethodResolverCache();
 		if (methodResolverCache == null) {
 			return null;
 		}
-
-		Object methodResolver = methodResolverCache.get(handler.getClass()
-		        .getSuperclass());
+		
+		Object methodResolver = methodResolverCache.get(handler.getClass().getSuperclass());
 		if (methodResolver == null) {
 			methodResolver = methodResolverCache.get(handler.getClass());
 			if (methodResolver == null) {
@@ -54,7 +51,6 @@ public class ControllerMethodResolver {
 			ReflectionUtils.makeAccessible(methodMethod);
 			method = (Method) methodMethod.invoke(methodResolver, request);
 		} catch (Exception e) {
-			// do naught.
 		}
 		return method;
 	}
@@ -67,7 +63,6 @@ public class ControllerMethodResolver {
 			ReflectionUtils.makeAccessible(methodCacheField);
 			cache = (Map) methodCacheField.get(handlerAdapter);
 		} catch (Exception e) {
-			// i can do naught.
 		}
 		return cache;
 	}
