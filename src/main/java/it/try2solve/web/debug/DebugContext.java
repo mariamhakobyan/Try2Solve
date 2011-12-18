@@ -34,5 +34,9 @@ public class DebugContext {
 	public static String get(String key) {
 		return debugger.get().get(key);
 	}
+	
+	public static void remove(String key) {
+		debugger.get().remove(key);
+	}
 
 }

@@ -17,7 +17,8 @@ public class ControllerMethodResolver {
 	private AnnotationMethodHandlerAdapter handlerAdapter;
 
 	public Method getControllerMethod(Object handler, HttpServletRequest request) {
-		Map methodResolverCache = getMethodResolverCache();
+		@SuppressWarnings("rawtypes")
+        Map methodResolverCache = getMethodResolverCache();
 		if (methodResolverCache == null) {
 			return null;
 		}
@@ -33,13 +34,15 @@ public class ControllerMethodResolver {
 		return method;
 	}
 
+	@SuppressWarnings({"rawtypes", "unchecked"})
 	public Annotation getAnnotationFromControllerMethod(Object handler,
 	        HttpServletRequest request, Class annotationClass) {
 		Method method = getControllerMethod(handler, request);
 		if (method == null) {
 			return null;
 		}
-		Annotation annotation = method.getAnnotation(annotationClass);
+		
+        Annotation annotation = method.getAnnotation(annotationClass);
 		return annotation;
 	}
 
@@ -55,7 +58,8 @@ public class ControllerMethodResolver {
 		return method;
 	}
 
-	private Map getMethodResolverCache() {
+	@SuppressWarnings("rawtypes")
+    private Map getMethodResolverCache() {
 		Map cache = null;
 		try {
 			Field methodCacheField = handlerAdapter.getClass()
