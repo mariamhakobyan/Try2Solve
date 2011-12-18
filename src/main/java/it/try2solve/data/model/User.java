@@ -5,6 +5,7 @@ import it.try2solve.util.StringUtils;
 import java.io.Serializable;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.document.mongodb.index.Indexed;
 import org.springframework.data.document.mongodb.mapping.Document;
 
@@ -29,6 +30,9 @@ public class User extends BaseModel implements Serializable {
 	private int userSource;
 	private String link;
 	private long lastLogin;
+	
+	@Transient
+	private int role;
 
 	/**
 	 * @return the id
@@ -171,6 +175,20 @@ public class User extends BaseModel implements Serializable {
      */
     public void setSocialId(String socialId) {
     	this.socialId = socialId;
+    }
+    
+	/**
+     * @return the role
+     */
+    public int getRole() {
+    	return role;
+    }
+
+	/**
+     * @param role the role to set
+     */
+    public void setRole(int role) {
+    	this.role = role;
     }
 
 	/* (non-Javadoc)

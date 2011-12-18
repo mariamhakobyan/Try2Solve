@@ -39,6 +39,9 @@
 	<util:properties id="appConfig" location="classpath:application.properties"/>
 	<context:property-placeholder properties-ref="appConfig"/>
 	
+	<!-- Controller Method Resolver -->
+	<bean id="controllerMethodResolver" class="it.try2solve.web.ControllerMethodResolver"/>
+	
 	<!-- I18N -->
 	<import resource="i18n.xml" />
 	
